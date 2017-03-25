@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.eightbitplatoon</groupId>
+  <artifactId>8bitplatoon</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>8bitplatoon</name>
+  <modules>
+    <module>8bitplatoon-ear</module>
+    <module>8bitplatoon-web</module>
+    <module>8bitplatoon-ejb</module>
+  </modules>
+</project>
