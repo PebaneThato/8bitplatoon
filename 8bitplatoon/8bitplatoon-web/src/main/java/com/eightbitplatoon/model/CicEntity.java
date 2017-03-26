@@ -54,7 +54,7 @@ public class CicEntity{
 
     @Override
     public String toString() {
-        return "Entity[ entityid=" + entityName + " " + emailAddress +" ]";
+        return "CicEntity [ " + entityName + " " + emailAddress +" " + comunications +"]";
     }
     
 }

@@ -32,7 +32,7 @@ public class CicRegistrationEngineImpl implements CicRegistrationEngine {
         entity.setEmailaddress(cicEntity.getEmailaddress());
 
         for (CicWeb cicWeb : cicEntity.getCicCollection()) {
-            
+
             cic.setCictype(cicWeb.getCictype());
             cic.setSubject(cicWeb.getSubject());
             cic.setBody(cicWeb.getBody());
@@ -40,7 +40,6 @@ public class CicRegistrationEngineImpl implements CicRegistrationEngine {
             cic.setCictimestamp(cicWeb.getCictimestamp());
             cic.setEntityid(entity);
             cicComunications.add(cic);
-            
         }
 
         entity.setCicCollection(cicComunications);
@@ -50,7 +49,7 @@ public class CicRegistrationEngineImpl implements CicRegistrationEngine {
 
     @Override
     public CicWeb RetrieveCicInfo(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
 
 }

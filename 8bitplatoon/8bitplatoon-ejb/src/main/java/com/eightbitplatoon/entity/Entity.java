@@ -15,7 +15,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,28 +27,28 @@ import javax.xml.bind.annotation.XmlTransient;
 @javax.persistence.Entity
 @Table(name = "entity")
 public class Entity implements Serializable {
-    
+
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Basic(optional = false)
     @Column(name = "entityid")
     private Long entityId;
-    
+
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
     @Column(name = "entityname")
     private String entityName;
-    
+
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
     @Column(name = "emailaddress")
     private String emailAddress;
-    
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cicEntity" ,fetch = FetchType.LAZY)
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cicEntity", fetch = FetchType.LAZY)
     private Set<Cic> comunications;
 
     public Entity() {
@@ -89,7 +88,6 @@ public class Entity implements Serializable {
         this.emailAddress = emailAddress;
     }
 
-    @XmlTransient
     public Set<Cic> getCicCollection() {
         return comunications;
     }
@@ -120,7 +118,7 @@ public class Entity implements Serializable {
 
     @Override
     public String toString() {
-        return "com.eightbitplatoon.entity.Entity[ entityid=" + entityId + " ]";
+        return "com.eightbitplatoon.entity.Entity[ " + entityId + " " + entityName + " " + emailAddress + " " + comunications + "]";
     }
-    
+
 }

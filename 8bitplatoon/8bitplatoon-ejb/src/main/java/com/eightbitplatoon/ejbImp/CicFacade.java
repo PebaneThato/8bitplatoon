@@ -2,6 +2,8 @@ package com.eightbitplatoon.ejbImp;
 
 import com.eightbitplatoon.ejb.CicFacadeRemote;
 import com.eightbitplatoon.entity.Cic;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,7 +16,7 @@ public class CicFacade implements CicFacadeRemote {
 
     @Override
     public Cic find(Long id) {
-        return em.find(Cic.class, id);
+        return null;
     }
 
 }
